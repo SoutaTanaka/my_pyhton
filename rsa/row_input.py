@@ -1,6 +1,6 @@
 import time
 import random
-from statistics import mean
+#from statistics import mean
 
 def gcd(x, y):
     if y == 0:
@@ -25,6 +25,8 @@ def near_prime(n):
         return near_prime(n + 1)
 
 def row(n):
+    if is_prime(n) == False:
+        return 1
     a = 2
     b = 2
     d = 1
@@ -36,6 +38,8 @@ def row(n):
         return False
     else:
         return d
+
+
 
 def recursive_prime_factorization(n):
     if n <= 3 :
