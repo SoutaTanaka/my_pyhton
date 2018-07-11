@@ -1,12 +1,22 @@
 import numpy as np
-from PIL import Image, ImageFilter
+from PIL import Image
 #import Image
-a = np.array([[0,255],[255,0]])
-img = np.tile(a,(5000,5000))
 
-print(type(img))
+a = np.array([[[255,255,255,255],[0,0,0,255]],[[0,0,0,255],[255,255,255,255]]])
+img = np.tile(a,(500,500,1))
 
-pimg = Image.fromarray(img)
 
+
+
+#print(img)
+
+#pimg = Image.fromarray(img)
+#pimg.show()
+
+#print(type(img))
+
+pimg = Image.fromarray(np.uint8(img))
+
+pimg.save("fooo.png")
 #pimg.show()
 
